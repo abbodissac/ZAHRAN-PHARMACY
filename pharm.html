@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAHRAN PHARMACY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .container {
+            padding: 20px;
+            position: relative;
+        }
+        .background-logo {
+            position: absolute;
+            padding: 250px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/d690a4c44b6576744be355ca48ff3da7.png'); /* إضافة الشعار كخلفية */
+            background-size: 500px; /* حجم الشعار */
+            background-position: left center; /* الشعار يظهر على اليسار */
+            background-repeat: repeat;
+            opacity: 0.15; /* تقليل الشفافية إلى 15% */
+            z-index: -1; /* لضمان بقاء الخلفية خلف المحتوى */
+        }
+        .whatsapp-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .whatsapp-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            filter: brightness(0.7); /* تغميق أيقونة الواتساب */
+        }
+        .whatsapp-number {
+            font-size: 20px; /* تكبير حجم النص */
+            font-weight: bold; /* جعل النص أكثر سماكة */
+            color: #004d40; /* تغميق لون النص */
+            text-decoration: none;
+        }
+        .whatsapp-number:hover {
+            color: #002b24; /* تغميق إضافي عند التمرير */
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #004d40; /* تغميق لون النص */
+            font-size: 20px; /* تكبير حجم النص */
+            font-weight: bold; /* جعل النص أكثر سماكة */
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: #002b24; /* تغميق إضافي عند التمرير */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- الشعار في الجهة اليسرى -->
+        <div class="logo">
+            <img src="images/d690a4c44b6576744be355ca48ff3da7.png" alt="ZAHRAN PHARMACY Logo">
+            <h1>ZAHRAN PHARMACY</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- طبقة الخلفية الشفافة -->
+        <div class="background-logo"></div>
+        
+        <!-- لوجو الواتساب مع رقم الواتساب -->
+        <div class="whatsapp-contact">
+            <a href="https://wa.me/201094949285" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+            <a href="https://wa.me/201094949285" class="whatsapp-number" target="_blank">01094949285</a>
+        </div>
+
+        <!-- قسم رقم الهاتف -->
+        <div class="contact">
+            <h2>اتصل بنا</h2>
+            <p>للتواصل المباشر عبر الهاتف، يرجى الاتصال على الرقم:</p>
+            <a href="tel:+201094949285">01094949285</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>ZAHRAN PHARMACY © 2024 - جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
