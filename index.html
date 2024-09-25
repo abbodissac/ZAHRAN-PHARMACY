@@ -47,9 +47,7 @@
             z-index: -1; /* لضمان بقاء الخلفية خلف المحتوى */
         }
         .whatsapp-contact {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center; /* توسيط محتوى الواتساب */
             margin: 20px 0;
         }
         .whatsapp-icon {
@@ -89,7 +87,39 @@
         .contact a:hover {
             color: #002b24; /* تغميق إضافي عند التمرير */
         }
+        .services {
+            margin: 20px 0;
+            text-align: right; /* محاذاة النص إلى اليمين */
+        }
+        .services h2 {
+            color: #00796b; /* لون عنوان الخدمات */
+            cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+        }
+        .services-content {
+            display: block; /* إظهار محتوى الخدمات بشكل افتراضي */
+            margin-top: 10px;
+            text-align: right; /* محاذاة النص داخل القائمة إلى اليمين */
+        }
+        .services ul {
+            list-style-type: none; /* إزالة النقاط من القائمة */
+            padding: 0;
+        }
+        .services li {
+            margin: 10px 0; /* مسافة بين العناصر */
+            font-size: 18px; /* تكبير حجم النص */
+            color: #004d40; /* لون النص */
+        }
     </style>
+    <script>
+        function toggleServices() {
+            const servicesContent = document.getElementById('services-content');
+            if (servicesContent.style.display === 'none' || servicesContent.style.display === '') {
+                servicesContent.style.display = 'block'; // إظهار المحتوى
+            } else {
+                servicesContent.style.display = 'none'; // إخفاء المحتوى
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -105,19 +135,33 @@
         <!-- طبقة الخلفية الشفافة -->
         <div class="background-logo"></div>
         
-        <!-- لوجو الواتساب مع رقم الواتساب -->
-        <div class="whatsapp-contact">
-            <a href="https://wa.me/201094949285" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-            </a>
-            <a href="https://wa.me/201094949285" class="whatsapp-number" target="_blank">01094949285</a>
-        </div>
+        <!-- قسم الخدمات -->
+        <div class="services">
+            <h2>خدماتنا</h2>
+            <div id="services-content" class="services-content">
+                <ul>
+                    <li>١. لدينا قياس ضغط و سكر و وزن</li>
+                    <li>٢. نمد المريض بكافة المعلومات الهامة عن الأدوية التي يصفها لهم الطبيب واستخدامها</li>
+                    <li>٣. القيام بأعمال الاستشارات والخدمات الصيدلية</li>
+                    <li>٤. لا يقتصر دورنا على تقديم العلاجات الدوائية فقط ولكننا نسعى دائماً لتقديم أفضل الخدمات وأجودها في مجال منتجات العناية الشخصية ومستحضرات التجميل</li>
+                    <li>٥. يوجد لدينا توصيل أفضل وأسرع خدمة توصيل للمنازل</li>
+                </ul>
+            </div>
 
-        <!-- قسم رقم الهاتف -->
-        <div class="contact">
-            <h2>اتصل بنا</h2>
-            <p>للتواصل المباشر عبر الهاتف، يرجى الاتصال على الرقم:</p>
-            <a href="tel:+201094949285">01094949285</a>
+            <!-- قسم رقم الهاتف والواتساب -->
+            <div class="contact">
+                <h2>اتصل بنا</h2>
+                <p>للتواصل المباشر عبر الهاتف، يرجى الاتصال على الرقم:</p>
+                <a href="tel:+201094949285">01094949285</a>
+                <p>للتواصل عبر الواتساب:</p>
+                <div class="whatsapp-contact">
+                    <a href="https://wa.me/201094949285" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+                    </a>
+                    <a href="https://wa.me/201094949285" class="whatsapp-number" target="_blank">01094949285</a>
+                </div>
+                <p>العنوان: <a href="https://maps.app.goo.gl/PZPXj8FHuPb9iS8d6" target="_blank">٦ أكتوبر الحي الثاني المجاورة الرابعة عمارة ٤/٢٩</a></p>
+            </div>
         </div>
     </div>
 
