@@ -14,19 +14,23 @@
         header {
             background-color: #00796b;
             color: white;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; /* لمرونة أكبر في العناصر */
         }
         .logo {
             display: flex;
             align-items: center;
         }
         .logo img {
-            width: 80px;
+            width: 60px; /* حجم الشعار المناسب للموبايل */
             height: auto;
-            margin-right: 20px;
+            margin-right: 10px;
+        }
+        h1 {
+            font-size: 1.5rem; /* تقليل حجم الخط لجعل النص متناسب */
         }
         .container {
             padding: 20px;
@@ -34,13 +38,12 @@
         }
         .background-logo {
             position: absolute;
-            padding: 250px;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-image: url('images/d690a4c44b6576744be355ca48ff3da7.png'); /* إضافة الشعار كخلفية */
-            background-size: 500px; /* حجم الشعار */
+            background-size: 300px; /* حجم الشعار المناسب للموبايل */
             background-position: left center; /* الشعار يظهر على اليسار */
             background-repeat: repeat;
             opacity: 0.15; /* تقليل الشفافية إلى 15% */
@@ -51,13 +54,13 @@
             margin: 20px 0;
         }
         .whatsapp-icon {
-            width: 50px;
-            height: 50px;
+            width: 40px; /* تقليل حجم أيقونة الواتساب */
+            height: 40px;
             margin-right: 10px;
             filter: brightness(0.7); /* تغميق أيقونة الواتساب */
         }
         .whatsapp-number {
-            font-size: 20px; /* تكبير حجم النص */
+            font-size: 1.2rem; /* حجم النص مناسب للجوال */
             font-weight: bold; /* جعل النص أكثر سماكة */
             color: #004d40; /* تغميق لون النص */
             text-decoration: none;
@@ -70,7 +73,6 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
             width: 100%;
             bottom: 0;
         }
@@ -80,7 +82,7 @@
         }
         .contact a {
             color: #004d40; /* تغميق لون النص */
-            font-size: 20px; /* تكبير حجم النص */
+            font-size: 1.2rem; /* تكبير حجم النص */
             font-weight: bold; /* جعل النص أكثر سماكة */
             text-decoration: none;
         }
@@ -106,8 +108,37 @@
         }
         .services li {
             margin: 10px 0; /* مسافة بين العناصر */
-            font-size: 18px; /* تكبير حجم النص */
+            font-size: 1rem; /* حجم النص مناسب للجوال */
             color: #004d40; /* لون النص */
+        }
+
+        /* وسائط الاستعلام لتنسيق الشاشات الأكبر */
+        @media (min-width: 768px) {
+            header {
+                padding: 20px;
+            }
+            .logo img {
+                width: 80px; /* تكبير الشعار للأجهزة الأكبر */
+            }
+            h1 {
+                font-size: 2rem; /* تكبير العنوان للأجهزة الأكبر */
+            }
+            .whatsapp-icon {
+                width: 50px; /* تكبير أيقونة الواتساب للأجهزة الأكبر */
+                height: 50px;
+            }
+            .whatsapp-number {
+                font-size: 1.5rem; /* تكبير النص للأجهزة الأكبر */
+            }
+            .contact a {
+                font-size: 1.5rem; /* تكبير النص للأجهزة الأكبر */
+            }
+            .services li {
+                font-size: 1.2rem; /* تكبير النص في الخدمات للأجهزة الأكبر */
+            }
+            .background-logo {
+                background-size: 500px; /* تكبير الخلفية للأجهزة الأكبر */
+            }
         }
     </style>
     <script>
